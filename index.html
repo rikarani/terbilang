@@ -1,9 +1,5 @@
-<!--
-  TODO: bikin dark mode nya
--->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,15 +7,15 @@
     <title>Terbilang</title>
 
     <!-- Style CSS -->
-    <!-- <link rel="stylesheet" href="src/css/style.css" /> -->
-    <link rel="stylesheet" href="dist/css/final.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- <link rel="stylesheet" href="dist/css/final.css" /> -->
     <!-- Style CSS -->
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="src/img/favicon2.png" type="image/x-icon" />
     <!-- Favicon -->
   </head>
-  <body class="bg-slate-200">
+  <body class="bg-slate-200 dark:bg-gray-900">
     <!-- Navbar -->
     <section id="navbar">
       <nav class="container box-border flex max-w-2xl justify-between px-3 py-2 sm:mx-auto">
@@ -27,8 +23,8 @@
         <div class="identitas flex items-center">
           <!-- Logo Github -->
           <div class="logo mr-2">
-            <a href="">
-              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12">
+            <a href="https://github.com/rikarani/terbilang-generator" target="_blank">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 dark:invert">
                 <!-- <title>GitHub</title> -->
                 <path
                   d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
@@ -40,7 +36,7 @@
 
           <!-- Tulisan Buat Website -->
           <div class="tulisan-website">
-            <h1 class="text-xl font-bold">Terbilang Generator</h1>
+            <h1 class="text-xl font-bold dark:text-white">Terbilang Generator</h1>
           </div>
           <!-- Tulisan Buat Website -->
         </div>
@@ -48,14 +44,14 @@
 
         <!-- Toggle Dark Mode -->
         <div class="toggle flex items-center justify-evenly">
-          <span class="mr-2 font-semibold">Light</span>
+          <span class="mr-2 font-semibold dark:text-white">Light</span>
           <input type="checkbox" id="dark-mode" class="hidden" />
           <label for="dark-mode" class="">
-            <div class="circle-wrapper relative mt-1 h-6 w-11 rounded-full bg-slate-400">
+            <div class="circle-wrapper relative mt-1 h-6 w-11 rounded-full bg-slate-400 dark:bg-slate-600">
               <div id="circle" class="absolute top-[3px] left-[2px] h-5 w-5 rounded-full bg-white transition duration-300 ease-in-out"></div>
             </div>
           </label>
-          <span class="ml-2 font-semibold">Dark</span>
+          <span class="ml-2 font-semibold dark:text-white">Dark</span>
         </div>
         <!-- Toggle Dark Mode -->
       </nav>
@@ -64,36 +60,36 @@
 
     <!-- Konten -->
     <section id="konten">
-      <main class="container mt-2 box-border max-w-2xl bg-white p-4 shadow-lg sm:mx-auto sm:rounded-2xl">
+      <main class="container mt-2 box-border max-w-2xl bg-white p-4 shadow-lg dark:bg-slate-700 sm:mx-auto sm:rounded-2xl">
         <!-- Form -->
         <form class="box-border w-full">
-          <div class="wrapper flex w-full rounded-lg bg-neutral-300 px-2 py-2">
+          <div class="wrapper flex w-full rounded-lg bg-neutral-300 px-2 py-2 dark:bg-slate-400">
             <div class="label flex">
-              <label for="erpe" class="mr-1 self-center">Rp.</label>
+              <label for="erpe" class="mr-1 self-center font-semibold">Rp.</label>
             </div>
             <div class="field w-full">
-              <input type="number" name="" id="erpe" class="w-full rounded border-2 p-1 focus:ring-0" />
+              <input type="number" name="" id="erpe" class="w-full appearance-none rounded p-1 focus:ring-0" />
             </div>
           </div>
         </form>
         <!-- Form -->
 
         <!-- Tulisan Terbilang -->
-        <div class="tulisan mt-4">
+        <div class="tulisan mt-4 dark:text-white">
           <h3 id="ha3" class="text-xl font-bold">
             Terbilang :
-            <span id="terbilang" class="tracking-wide"><!-- nanti generate pakek JS -->Hello World</span>
+            <span id="terbilang" class="tracking-wide"><!-- nanti generate pakek JS --></span>
           </h3>
         </div>
         <!-- Tulisan Terbilang -->
 
         <!-- Tombol Buat Copy -->
-        <button id="kopi" class="mt-2 rounded-lg bg-slate-800 px-2 py-1 text-lg text-white">Salin Hasil</button>
+        <button id="kopi" class="mt-2 rounded-lg bg-slate-900 px-2 py-1 text-lg text-white">Salin Hasil</button>
         <!-- Tombol Buat Copy -->
       </main>
     </section>
     <!-- Konten -->
 
-    <!-- <script src="dist/js/script.js" type="module"></script> -->
+    <script src="dist/js/script.js" type="module"></script>
   </body>
 </html>
