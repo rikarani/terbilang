@@ -72,30 +72,37 @@
               <label for="erpe" class="mr-1 self-center font-semibold">Rp.</label>
             </div>
             <div class="field w-full">
-              <input type="number" name="" id="erpe" class="w-full rounded p-1 focus:ring-0" />
+              <input type="number" min="0" max="999999999999999" id="erpe" class="w-full rounded border-2 p-1 out-of-range:border-red-500 focus:ring-0" />
             </div>
           </div>
         </form>
         <!-- Form -->
 
+        <!-- Tulisan Warning (muncul kalau angka lebih besar dari 999999999999999) -->
+        <h4 class="warning hidden text-sm font-bold text-red-500">Input Melebihi Batas</h4>
+        <!-- Tulisan Warning (muncul kalau angka lebih besar dari 999999999999999) -->
+
         <!-- Tulisan Terbilang -->
-        <div class="tulisan mt-4 dark:text-white">
-          <h3 id="ha3" class="text-xl font-bold">
+        <div class="tulisan dark:text-white">
+          <h3 id="ha3" class="text-lg font-bold sm:text-xl">
             Terbilang :
-            <span id="terbilang" class="tracking-wide"><!-- nanti generate pakek JS --></span>
+            <span id="terbilang" class="tracking-tight selection:bg-fuchsia-400 selection:text-slate-50"><!-- nanti generate pakek JS --></span>
           </h3>
         </div>
         <!-- Tulisan Terbilang -->
 
         <!-- Tombol Buat Copy -->
-        <button id="copyText" class="mt-2 mr-1 rounded-lg bg-slate-900 px-2 py-1 text-lg text-white">Salin Text</button>
+        <button id="copyText" class="mt-2 mr-1 rounded-lg bg-slate-900 px-2 py-1 text-lg text-white disabled:cursor-not-allowed disabled:bg-slate-400" disabled>Salin Text</button>
+        <!-- Tombol Buat Copy -->
+
+        <!-- Tooltip (disamping tombol salin) -->
         <div class="tooltip-wrapper relative inline-block">
           <span
-            class="tooltip-text absolute left-0 -top-5 w-44 rounded-md bg-slate-500 text-center text-lg text-white transition duration-300 ease-in-out after:absolute after:top-[7px] after:-left-2 after:-ml-1 after:border-8 after:border-solid after:border-r-slate-500 after:border-t-transparent after:border-b-transparent after:border-l-transparent after:content-['']"
+            class="tooltip-text absolute left-0 -top-5 w-44 rounded-md bg-slate-500 text-center text-lg text-white opacity-0 transition-all duration-300 ease-in-out after:absolute after:top-[7px] after:-left-2 after:-ml-1 after:border-8 after:border-solid after:border-r-slate-500 after:border-t-transparent after:border-b-transparent after:border-l-transparent after:content-['']"
             >Text Berhasil Disalin</span
           >
         </div>
-        <!-- Tombol Buat Copy -->
+        <!-- Tooltip (disamping tombol salin) -->
       </main>
     </section>
     <!-- Konten -->
