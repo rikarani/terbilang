@@ -39,7 +39,7 @@ field.addEventListener("input", function () {
     tombolSalin.disabled = true;
   }
   // * kalo inputan nya melebihi batas
-  else if (field.value >= "9999999999999999") {
+  else if (field.value > "999999999999999") {
     const tombolSalin = document.getElementById("copyText");
     const warning = document.querySelector(".warning");
 
